@@ -1,0 +1,41 @@
+.searchBar-page{
+    display: flex;
+    gap: 2rem;
+    border-bottom: solid black 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background: #d9b99b;
+}
+.searchBar-page button{
+    height: 2rem;
+    border-radius: .3rem;
+    background-color: lightgreen;
+}
+       
+       
+
+
+.list{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+}
+.inputs{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs input{
+    height: 2em;
+    border-radius: .3rem;
+}
