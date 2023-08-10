@@ -1,6 +1,6 @@
 import React from 'react';
 import Business from './Business';
-import pizzaRestaurant from './pizzaRestaurant.png'
+import pizzaRestaurant from './imgrestaurant.jpeg'
 const businessList = [
     {
         image: pizzaRestaurant,
@@ -82,7 +82,6 @@ const BusinessList = () => {
 
     return (
         <div className='page'>
-            <h1>Business List</h1>
             <div className='flex-container'>
                 {businesses}
             </div>

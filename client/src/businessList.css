@@ -1,6 +1,6 @@
 
 .flex-container{
-    margin: 0 auto;
+    margin: 2.5rem auto;
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
@@ -9,10 +9,12 @@
 }
 .container{
     border: black 2px solid;
-    padding: 2rem;
+    max-width: 350px;
+    /* margin: 3rem auto; */
+    padding: 1em;
 }
 
-.page{
+/* .page{
     
     background: linear-gradient(90deg, rgba(255, 240, 219, 1) 0%, rgba(238, 217, 196, 1) 100%);
-}
+} */
