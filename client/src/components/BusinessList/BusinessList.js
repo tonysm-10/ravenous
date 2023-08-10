@@ -1,6 +1,6 @@
 import React from 'react';
 import Business from './Business';
-import pizzaRestaurant from './imgrestaurant.jpeg'
+import pizzaRestaurant from '../../assets/imgrestaurant.jpeg'
 const businessList = [
     {
         image: pizzaRestaurant,

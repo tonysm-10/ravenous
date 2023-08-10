@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './searchBar.css';
-import restaurantapp from './restaurantapp.jpeg'
+import restaurantapp from '../../assets/restaurantapp.jpeg'
 const SearchBar = () => {
     const [inputSearchBusiness, setInputSearchBusiness] = useState('');
     const [inputWhere, setInputWhere] = useState('');
