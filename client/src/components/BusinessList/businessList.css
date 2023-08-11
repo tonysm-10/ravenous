@@ -1,4 +1,10 @@
-
+.img{
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    max-width: 350px;
+    max-height: 400px;
+}
 .flex-container{
     margin: 2.5rem auto;
     display: flex;
@@ -8,12 +14,18 @@
     justify-content: center;
 }
 .container{
-    border: black 2px solid;
+    /* border: black 2px solid; */
     max-width: 350px;
     /* margin: 3rem auto; */
     padding: 1em;
 }
-
+.container:hover{
+    box-shadow: 2px 2px 2px 2px grey;
+}
+.bcgk{
+    border-top: solid black 2px;
+    background-color: white;
+}
 /* .page{
     
     background: linear-gradient(90deg, rgba(255, 240, 219, 1) 0%, rgba(238, 217, 196, 1) 100%);

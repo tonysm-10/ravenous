@@ -6,12 +6,21 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    /* background: wheat; */
+    background: #535f80;
 }
 .searchBar-page button{
-    height: 2rem;
-    border-radius: .3rem;
-    background-color: whitesmoke;
+    height: 1.7rem;
+    /* border-radius: .8rem; */
+    background-color: #082340;
+    color: white;
+border: none;
+    /* border: solid black 1px; */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.searchBar-page button:hover{
+    background-color: transparent;
 }
 #render {
     white-space: pre-line;
@@ -38,13 +47,13 @@
 .item{
     border-bottom: 2px solid black;
     cursor: pointer;
-    font-size: 28px;
-    font-weight: 500;
-    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    color: #123c69;
 }
 .item.selected {
-    font-weight: bolder;
-    color: black; /* Change this to your desired selected color */
+    /* font-weight: bolder; */
+    color: white; /* Change this to your desired selected color */
   }
 
 .inputs{
@@ -52,14 +61,21 @@
     gap: 2em;
     justify-content: center;
     align-items: center;
-    
+    outline: none;
 }
 
-.inputs input{
+.inputs input {
     height: 2.3em;
     width: 14em;
-    border-radius: .3rem;
-    background-color: whitesmoke;
-    color: black;
-    /* font-weight: bolder; */
+    /* border-radius: .5rem; */
+    background-color: transparent;
+    color: white;
+    /* outline-offset: none;
+    outline: 2px solid #123c69; */
+    border: 2px solid #123c69;
+}
+
+.inputs input:focus{
+    border: none;
+    outline: solid #123c69;
 }

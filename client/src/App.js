@@ -1,11 +1,11 @@
 import SearchBar from './components/SearchBar/SearchBar'
-import BusinessList from './components/BusinessList/BusinessList';
+// import BusinessList from './components/BusinessList/BusinessList';
 
 function App() {
   return (
     <div>
       <SearchBar />
-      <BusinessList />
+      {/* <BusinessList /> */}
     </div>
   );
 }
