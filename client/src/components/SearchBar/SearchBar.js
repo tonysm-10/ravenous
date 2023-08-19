@@ -5,50 +5,51 @@ import texturebg from '../../assets/texturebg.png'
 import searchBusinesses from '../../utils/YelpApi';
 import BusinessList from '../BusinessList/BusinessList'; // Import your BusinessList component
 
+
 const SearchBar = () => {
     const [inputSearchBusiness, setInputSearchBusiness] = useState('');
     const [inputWhere, setInputWhere] = useState('');
     const [select, setSelect] = useState('');
     const [feedback, setFeedback] = useState('');
-    const [businesses, setBusinesses] = useState([]); // State to hold fetched businesses
-    
+    const [businesses, setBusinesses] = useState([]);
+
     const backgroundImageStyle = {
         backgroundImage: `url(${texturebg})`,
-        // backgroundSize: 'cover', // Adjusts the background image size
-        backgroundPosition: 'center', 
-        
+        backgroundPosition: 'center',
     };
-    
-    const handleChangeSearchBusiness = ({target}) => {
-        setInputSearchBusiness(target.value);
-    }
 
-    const handleChangeWhere = ({target}) => {
+    const handleChangeSearchBusiness = ({ target }) => {
+        setInputSearchBusiness(target.value);
+    };
+
+    const handleChangeWhere = ({ target }) => {
         setInputWhere(target.value);
-    }
-        
+    };
+
     const handleClick = (e) => {
         const choice = e.currentTarget.getAttribute('data-value');
         setSelect(choice);
     };
-    
+
     const handleSubmit = async () => {
         if (inputSearchBusiness !== '' && inputWhere !== '' && select !== '') {
             setFeedback(`Searching Yelp with ${inputSearchBusiness},\n${inputWhere},\n${select}...`);
-    
+
             try {
                 const results = await searchBusinesses(inputSearchBusiness, inputWhere, select);
 
-                console.log('Fetched data:', results); // Log the fetched data
+                console.log('Fetched data:', results);
                 setBusinesses(results);
             } catch (error) {
                 console.error('Error fetching data:', error);
                 setBusinesses([]);
+            } finally {
+                setFeedback(''); // Clear feedback once data has loaded
             }
         } else {
             setFeedback('Select Your choices!');
         }
-    }
+    };
     
     
     return (
@@ -65,16 +66,20 @@ const SearchBar = () => {
             </div>
             
             <button onClick={() => { handleSubmit(); }}>Let's Go!</button>
+
             <div id="render" className="feedback">
                 {feedback && <h2>{feedback}</h2>}
-            </div> 
-            {/* Pass the fetched businesses to BusinessList component */}
-            <div className='bcgk'>
-                <BusinessList businesses={businesses} />
+            </div>                 
+            <div className={businesses.length > 0 ? 'bcgk' : ''}>
+            <BusinessList businesses={businesses} />
             </div>
+
             
         </div>
     );
 }
 
 export default SearchBar;
+
+
+
